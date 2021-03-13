@@ -1,0 +1,172 @@
+$primary-color: #047aed;
+$secondary-color: #1c3fa8;
+$dark-color: #002240;
+$light-color: #f4f4f4;
+$success-color: #5cb85c;
+$error-color: #d9534f;
+
+.container { 
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    color: #333;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px #fff solid;
+}
+
+// Backgrounds & Coloured buttons 
+.bg-primary, .btn-primary {
+  background: $primary-color;
+  color: #fff;
+}
+
+.bg-secondary, .btn-secondary {
+  background: $secondary-color;
+  color: #fff;
+}
+
+.bg-dark, .btn-dark {
+  background: $dark-color;
+  color: #fff;
+}
+
+.bg-light, .btn-light {
+  background: $light-color;
+  color: #333;
+}
+
+.bg-primary a, .btn-primary a, .bg-secondary a, .btn-secondary a, .bg-dark a, .btn-dark a {
+  color: #fff;
+}
+
+// Text colors 
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-dark {
+  color: $dark-color;
+}
+
+.text-light {
+  color: $light-color;
+}
+
+// Text Sizes 
+
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+
+
+.text-center {
+    text-align: center;
+}
+
+// Alert 
+
+.alert {
+  background: $light-color;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.alert i {
+  margin-right: 10px;
+}
+
+.alert-success {
+  background: $success-color;
+}
+
+.alert-error {
+  background: $error-color;
+}
+
+
+// Margin & padding classes
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}
